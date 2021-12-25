@@ -3,6 +3,7 @@ package com.sqa.ujian5.main;
 import org.openqa.selenium.WebDriver;
 
 import com.sqa.ujian5.driver.DriverSingleton;
+import com.sqa.ujian5.elements.Buying;
 import com.sqa.ujian5.elements.CreateAccount;
 
 public class MainApp {
@@ -12,7 +13,7 @@ public class MainApp {
 		WebDriver driver = DriverSingleton.getInstance().getDriver();		
 		driver.get("http://automationpractice.com/index.php");
 		
-		CreateAccount element = new CreateAccount();
+/*		CreateAccount element = new CreateAccount();
 		element.menuSignIn();
 		element.formCreateEmail("user@phptravels.com");
 		
@@ -29,5 +30,9 @@ public class MainApp {
 		element.formRegister3("15697", "To Infinite an Beyond", "(0110)10110110111", "011000110111", "Dark Thunder Empress");
 		
 		element.Register();
+*/		
+		
+		Buying buy = new Buying();
+		buy.login("user@phptravels.com", "roseflower");
 	}
 }
